@@ -1,11 +1,13 @@
-
-
-Class : [[2110222 : Intro to CEDT]]
-Subject/Topics : #CentralProcessingUnit
-Date : 2024-08-18
-Teacher : Natawut Nupairoj
-
-Notes : 
+---
+title: "Central Processing Unit"
+date: "2024-08-18"
+published: true
+kind: "note"
+course: "2110222 : Intro to CEDT"
+teacher: "Natawut Nupairoj"
+tags:
+  - "CentralProcessingUnit"
+---
 
 ### CPU Overview
 ---
@@ -18,17 +20,17 @@ Notes :
 - ***CPU die*** - contains transistors and circuit of processor cores
 - ***CPU pins*** - connect CPU die to external components
 ##### CPU Die
-![[Pasted image 20240818234903.png]]
+![Pasted image 20240818234903](<./assets/Pasted image 20240818234903.png>)
 CPU differences
 
 ### Basic CPU Components
 ---
 Have 3 main parts CPU , BUS and Main memory (RAM)
 	
-![[Pasted image 20240818235722.png]]
+![Pasted image 20240818235722](<./assets/Pasted image 20240818235722.png>)
 CPU connects to Main memory (RAM) via BUS        ***Von Neumann Architecture***
 
-![[Pasted image 20240819000258.png]]
+![Pasted image 20240819000258](<./assets/Pasted image 20240819000258.png>)
 ***Inside CPU***
 - ALU - Arithmetic / Logic Unit
 - Control Unit - Conducting all cpu units 
@@ -39,9 +41,9 @@ CPU connects to Main memory (RAM) via BUS        ***Von Neumann Architecture***
 - Thus , we usually load data from memory to registers, calculate placing result in a register, and store results back to memory
 - This is called "Load-Store Architecture"
 
-##### Example : Adding 2 Numbers @03 <- @00 + @FE
+##### Example : Adding 2 Numbers @03 &lt;- @00 + @FE
 ---
-![[Pasted image 20240819001348.png]]
+![Pasted image 20240819001348](<./assets/Pasted image 20240819001348.png>)
 ***Step 1*** : Get one of the values to be added from memory and place it in a register
 ***Step 2*** : Get the other value to be added from memory and place it in another register
 ***Step 3*** : Activate the addition circuitry with the registers used in Steps 1 and 2 as inputs
@@ -60,7 +62,7 @@ and another register designated to hold the result
 
 ##### Brookshere's Simple Machine
 
-![[Pasted image 20240819003309.png]]
+![Pasted image 20240819003309](<./assets/Pasted image 20240819003309.png>)
 16 general-purpose registers (r0 - rF)
 ***Program Counter ($PC)*** - contains memory address that we will execute in the next step
 ***Instruction Register ($IR)*** - contains program that is currently executing
@@ -70,10 +72,10 @@ and another register designated to hold the result
 
 ##### Machine Cycle: Fetch-Decode-Execute
 ---
-![[Pasted image 20240819005722.png]]
+![Pasted image 20240819005722](<./assets/Pasted image 20240819005722.png>)
 ##### Machine : Fetch
 ---
-![[Pasted image 20240819010248.png]]
+![Pasted image 20240819010248](<./assets/Pasted image 20240819010248.png>)
 IR stores 2 bytes at a time ( opcode + operand requires 2 bytes (16 bits) )
 
 ##### Instruction Types
@@ -96,24 +98,24 @@ IR stores 2 bytes at a time ( opcode + operand requires 2 bytes (16 bits) )
 - Operand - 12 bits
 	- Additional details about operation -> address ,register , constant
 	
-		![[Pasted image 20240819012805.png]] ![[Pasted image 20240819013429.png]]
+		![Pasted image 20240819012805](<./assets/Pasted image 20240819012805.png>) ![Pasted image 20240819013429](<./assets/Pasted image 20240819013429.png>)
 				***Decoding***                                                  ***Executing***
 
 ##### Add Instruction
 ---
-![[Pasted image 20240819013646.png]] 
-![[Pasted image 20240819013930.png]]
+![Pasted image 20240819013646](<./assets/Pasted image 20240819013646.png>) 
+![Pasted image 20240819013930](<./assets/Pasted image 20240819013930.png>)
 
 
 ##### Op-code
 ---
-![[Pasted image 20240819014010.png]]
+![Pasted image 20240819014010](<./assets/Pasted image 20240819014010.png>)
 
-![[Pasted image 20240819015122.png]]
+![Pasted image 20240819015122](<./assets/Pasted image 20240819015122.png>)
 
-![[Pasted image 20240819015136.png]]
+![Pasted image 20240819015136](<./assets/Pasted image 20240819015136.png>)
 
-![[Pasted image 20240819015725.png]]
+![Pasted image 20240819015725](<./assets/Pasted image 20240819015725.png>)
 
 ```
 

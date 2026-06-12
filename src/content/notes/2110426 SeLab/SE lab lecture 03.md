@@ -1,6 +1,12 @@
-
-Date: 2025-04-02
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 03"
+date: "2025-04-02"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 #### Waterfall Development
 ---
@@ -253,8 +259,3 @@ includes :
 	- Feasibility analysis
 	- Requirement definition
 	- Current model of system (expected to evolve)
-
-
-
-
-

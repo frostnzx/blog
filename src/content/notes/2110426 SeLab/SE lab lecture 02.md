@@ -1,6 +1,12 @@
-
-Date: 2025-04-01
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 02"
+date: "2025-04-01"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 #### Generic view of software process
 ---
@@ -83,5 +89,3 @@ SELF ORGANIZING TEAM -> ออกสอบ
 	- Product backlog -> stack งานทั้งโปรเจค
 	- Sprint backlog -> stack งานที่เลือกมาเฉพาะ sprint
 	- Burndown chart -> chart ไว้วิเคราะห์พฤติกรรมของทีมในการทำงาน
-
-

@@ -1,7 +1,12 @@
-
-Date: 2025-02-10
-Tag: #2110322-database 
-
+---
+title: "Database lecture 08"
+date: "2025-02-10"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 ## Storage And Indexing
 
@@ -66,10 +71,10 @@ Tag: #2110322-database
 - ดังนั้นจะมีเพียง index เดียวเท่านั้นที่สามารถใช้วิธีนี้ได้
 - เรียกว่า indexed file organization
 ###### Alternative 2
-- a data entry is a <k , rid> pair
+- a data entry is a &lt;k , rid&gt; pair
 - แค่ search key ชี้ไปที่ record id ตรงๆเลย
 ###### Alternative 3
-- a data entry is <k,rid-list> 
+- a data entry is &lt;k,rid-list&gt; 
 - เก็บเป็น list ของ rid ของ record ที่มี search key value k
 
 #### Index classification
@@ -122,4 +127,3 @@ Tag: #2110322-database
 
 #### Cost model for our analysis
 ---
-

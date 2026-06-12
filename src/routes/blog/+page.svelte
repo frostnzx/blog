@@ -6,7 +6,10 @@
 
 <section class="intro">
 	<h2 class="font-extrabold">Blog</h2>
-	<p>Longer writing, project notes, and things that are too large to stay as scraps.</p>
+	<p>
+		Longer, more serious writing than my notes. Mostly for sharing knowledge, but sometimes about
+		things unrelated to tech.
+	</p>
 </section>
 
 <section class="notes-grid" aria-label="All blog posts">

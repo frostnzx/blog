@@ -166,12 +166,128 @@ article p,
 	display: block;
 	max-width: min(100%, 760px);
 	height: auto;
-	margin: 14px 0;
+	margin: 18px 0;
+	border: 1px solid #d7deea;
+	border-radius: 4px;
 }
 
 .note-asset {
 	color: #7a3850;
 	font-size: 16px;
+}
+
+.note {
+	max-width: 860px;
+}
+
+.note > h1 {
+	margin-bottom: 6px;
+	font-size: 28px;
+	line-height: 1.12;
+}
+
+.note > time {
+	margin-bottom: 30px;
+}
+
+.note-body {
+	max-width: 800px;
+	color: #243653;
+	line-height: 1.68;
+}
+
+.note-body :where(h2, h3, h4, h5, h6) {
+	margin: 34px 0 10px;
+	color: #061126;
+	line-height: 1.22;
+}
+
+.note-body h2 {
+	font-size: 24px;
+}
+
+.note-body h3 {
+	font-size: 21px;
+}
+
+.note-body h4 {
+	font-size: 19px;
+}
+
+.note-body h5,
+.note-body h6 {
+	font-size: 17px;
+}
+
+.note-body :where(p, ul, ol, blockquote, pre, table) {
+	margin: 0 0 18px;
+}
+
+.note-body :where(ul, ol) {
+	padding-left: 1.35rem;
+}
+
+.note-body li {
+	margin: 4px 0;
+}
+
+.note-body li :where(ul, ol) {
+	margin: 6px 0;
+}
+
+.note-body blockquote {
+	border-left: 4px solid #ff9ba0;
+	padding: 6px 0 6px 14px;
+	color: #40516f;
+}
+
+.note-body pre {
+	overflow-x: auto;
+	border: 1px solid #172642;
+	border-radius: 4px;
+	background: #f6f8fb;
+	padding: 14px;
+	line-height: 1.5;
+}
+
+.note-body pre code {
+	font-size: 15px;
+}
+
+.note-body :not(pre) > code {
+	border: 1px solid #d7deea;
+	border-radius: 3px;
+	background: #f6f8fb;
+	padding: 0 4px;
+	color: #172642;
+	font-size: 0.88em;
+}
+
+.note-body table {
+	display: block;
+	overflow-x: auto;
+	width: max-content;
+	max-width: 100%;
+	border-collapse: collapse;
+	font-size: 16px;
+}
+
+.note-body :where(th, td) {
+	border: 1px solid #d7deea;
+	padding: 7px 9px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.note-body th {
+	background: #f6f8fb;
+	color: #061126;
+}
+
+.note-body hr {
+	margin: 12px 0 18px;
+	border: 0;
+	border-top: 1px solid #d7deea;
 }
 
 .notes-grid {

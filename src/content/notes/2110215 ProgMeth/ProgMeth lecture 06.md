@@ -1,7 +1,12 @@
-
-Date: 2025-02-09
-Tag: #2110215-progmeth 
-
+---
+title: "ProgMeth lecture 06"
+date: "2025-02-09"
+published: true
+kind: "note"
+course: "2110215 ProgMeth"
+tags:
+  - "2110215-progmeth"
+---
 
 #### Set Key Trigger
 ---
@@ -43,7 +48,7 @@ area.setOnKeyPressed(new EventHandler<KeyEvent>() {
 ---
 			        -------------------   Blocked 
 				    |							               |
-New - start() --> Runnable <--(Scheduler)--> Running --> run() completes --> Dead
+New - start() --&gt; Runnable &lt;--(Scheduler)--&gt; Running --&gt; run() completes --&gt; Dead
 
 - Runnable พร้อมที่จะ run แล้วแต่อาจจะยังไม่ run เพราะแม้ว่าทุก thread จะทำงานเหมือนควบคู่ไปกับ main แต่จริงๆมันทำงานแบบ interleap คือให้ OS จัดการเปลี่ยนส่วนที่จะ run เช่น แปปเดียว run main อีกแปปเดียวเปลี่ยนไป run thread , มีแค่ 1 thread เท่านั้นจะ run ในเวลาใดเวลาหนึ่ง โดยสลับด้วย OS scheduler
 - Running , thread นี้ถูกเลือกโดย scheduler แล้วก็ไปรันได้ เป็นการ execute method run ใน thread
@@ -299,9 +304,3 @@ button.setOnAction(new EventHandler<ActionEvent>() {
 	} 
 })
 ```
-
-
-
-
-
-

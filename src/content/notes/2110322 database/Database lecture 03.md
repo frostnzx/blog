@@ -1,7 +1,12 @@
-
-Date: 2025-01-16
-Tag: #2110322-database 
-
+---
+title: "Database lecture 03"
+date: "2025-01-16"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 ## Relational Model
 ---
@@ -18,7 +23,7 @@ Tag: #2110322-database
 - Columns ใน table สามารถเรียกเป็น attribute ของ relation ได้
 - Domain --> มีนิยามเป็น logic , ex. USA_phone_numbers are the set of 10 digit phone number valid in the USA
 - Domain อาจจะมี format ของมันเองเช่น dd/mm/yyyy
-- Relation r ของ relation schema R(A1 , A2 , ... , An) เขียนแทนด้วย r(R), เป็นเซ็ตของ n-tuples r = {t1 , t2 , ... , tm}
+- Relation r ของ relation schema R(A1 , A2 , ... , An) เขียนแทนด้วย r(R), เป็นเซ็ตของ n-tuples r = `{t1 , t2 , ... , tm}`
 - R -> relation schema (intention) , r -> specific value (extension)
 - ถ้าให้ relation schema (R) ประกอบด้วย A1-An ดังนั้น value ของมันคือค่า r(R) ที่เกิดจาก d1 x d2 x ... dn
 - attribute หลายๆตัว share domain กันได้
@@ -46,7 +51,7 @@ Then:
 ---
 - Notation 
 	- สำหารับ R(A1 , A2 , A3 , ... , An) มี degree n
-	- t = <v1 , v2, v3, ... ,vn> คือ tuple ที่มีค่าตาม attribute n ตัว คือ v ซึ่ง tuple นี้จะอยู่ใน relation r ที่สร้างตาม schema R หรือเขียนได้ว่า r(R)
+	- t = &lt;v1 , v2, v3, ... ,vn&gt; คือ tuple ที่มีค่าตาม attribute n ตัว คือ v ซึ่ง tuple นี้จะอยู่ใน relation r ที่สร้างตาม schema R หรือเขียนได้ว่า r(R)
 #### Relational database constraints
 ---
 - Inherent model-based constraints --> มันมีอยู่แล้วเพราะเป็น database เช่น no duplicate tuple
@@ -66,7 +71,7 @@ Then:
 
 #### Entity Integrity
 ---
-- สมมุติมี S = {R1 , R2 , ... , Rn} 
+- สมมุติมี S = `{R1 , R2 , ... , Rn}` 
 - Entity Integrity
 	- Primary key หรือ PK ของทุก relation schema R ใน S ไม่สามารถมี null value ใน tuple ได้ เพราะต้องการใช้มันมา identify
 

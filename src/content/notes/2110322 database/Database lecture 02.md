@@ -1,7 +1,12 @@
-
-Date: 2025-01-09
-Tag: #2110322-database 
-
+---
+title: "Database lecture 02"
+date: "2025-01-09"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 ### DBMS
 #### Data Independence
@@ -16,8 +21,8 @@ Attributes --> คุณสมบัติของ entity
 - Simple attribute --> มีค่าเดี่ยวแยกออกไม่ได้ เช่น เลขบัตรประจำตัวประชาชน มีค่าเดี่ยว (single atomic value)
 - Composite  attribute --> ประกอบไปด้วยหลายๆส่วนเช่น Address จะมี Street , City , ZipCode , Country 
 > Hierarchy of composite attributes อาจจะมี components ที่ตัวมันเองเป็น composite ซึ่งจะทำให้เป็นโครงสร้างแบบต้นไม้
-- Multi value attribute --> จะมีค่าหลายค่า เช่น รายการ PreviousDegree ซึ่งจะมีหลายค่าเพราะอาจจะเรียนมาหลายที่ ใช้ ปีกกา { } ใน schema diagram แต่ใน ER ไม่ใช้ เหมือน array
-- Complex attribute --> multi value attribute ที่เก็บ composite attribute หลายค่าเช่น {PreviousDegrees(College , Year , Degree , Field)} พูดง่ายๆว่า array ของ composite attribute
+	- Multi value attribute --> จะมีค่าหลายค่า เช่น รายการ PreviousDegree ซึ่งจะมีหลายค่าเพราะอาจจะเรียนมาหลายที่ ใช้ ปีกกา `{ }` ใน schema diagram แต่ใน ER ไม่ใช้ เหมือน array
+	- Complex attribute --> multi value attribute ที่เก็บ composite attribute หลายค่าเช่น `{PreviousDegrees(College , Year , Degree , Field)}` พูดง่ายๆว่า array ของ composite attribute
 
 
 #### Entity types and Key Attributes
@@ -111,7 +116,7 @@ Recursive relationship type
 ---
 - มองจากข้างล่างขึ้นไป
 - สมมุติ ตอนเก็บข้อมูลเรารวม Entity หลายๆตัวมี group เป็น superclass 
-- EX. specialization of EMPLOYEE is {SALARIED_EMPLOYEE, HOURLY_EMPLOYEE}
+- EX. specialization of EMPLOYEE is `{SALARIED_EMPLOYEE, HOURLY_EMPLOYEE}`
 ***ผลลัพธ์เหมือนกับ superclass/subclass***
 
 #### Constraint on Specialization and Generalization
@@ -130,5 +135,3 @@ Recursive relationship type
 #### Union types
 ---
 ถ้า entity ไม่มี common attribute เลยก็ union กันเลย เช่น OWNER มันมีได้หลายประเภท ทั้ง PERSON / BANK / COMPANY แต่พวกนี้มันไม่มี common attribute กันเลยจึงจับมันมา union กันให้หมด
-
-

@@ -1,6 +1,12 @@
-
-Date: 2025-01-10
-Tag: #2110215-progmeth 
+---
+title: "ProgMeth lecture 01"
+date: "2025-01-10"
+published: true
+kind: "note"
+course: "2110215 ProgMeth"
+tags:
+  - "2110215-progmeth"
+---
 
 ## OOP
 
@@ -131,7 +137,7 @@ Com
 
 #### Method
 ---
-- smalll, should be < 20 lines
+- smalll, should be &lt; 20 lines
 	- refactor to other private methods if it is long
 - make your method perform only one task
 - avoid duplicated code
@@ -185,7 +191,3 @@ Static
 	- Unchecked Exception  --> ไม่จำเป็นที่จะต้องแก้ไข เพราะไม่ตรวจสอบตอน compile 
 	- Checked Exception      --> ต้องแก้ไขไม่งั้น compile ไม่ผ่าน
 - Throw --> ถ้ามี error ที่เขียนที่ throw ตัว caller จะ aware และส่งต่อไปพูดง่ายๆคือการโยนต่อ คือถ้าไม่ใช้ try catch ในตัว method นี้ก็ให้ throw ออกไปให้ method ที่ call ตัวนี้จัดการแทน ถ้าถึง main แล้วยัง throw อยู่ jvm ก็จะ print error ออกมา
-
-
-
-

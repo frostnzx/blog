@@ -1,21 +1,21 @@
-import { getNoteMetadata, getNoteSlug, type NoteMetadata } from '$lib/notes/metadata';
+import {
+	getContentSlug,
+	normalizeContentMetadata,
+	type MdsvexMetadata
+} from '$lib/content/metadata';
+
+const contentRoot = '/src/content/notes';
 
 export const load = async () => {
-	const rawModules = import.meta.glob<string>('/src/content/notes/**/*.md', {
+	const metadataModules = import.meta.glob<MdsvexMetadata>('/src/content/notes/**/*.md', {
 		eager: true,
-		query: '?raw',
-		import: 'default'
+		import: 'metadata'
 	});
 
-	const notes = Object.entries(rawModules)
-		.map(([path, raw]) => {
-			const slug = getNoteSlug(path);
-
-			return {
-				slug,
-				...getNoteMetadata(slug, {} satisfies NoteMetadata, raw)
-			};
-		})
+	const notes = Object.entries(metadataModules)
+		.map(([path, metadata]) =>
+			normalizeContentMetadata('note', getContentSlug(path, contentRoot), metadata)
+		)
 		.filter((note) => note.published !== false)
 		.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 

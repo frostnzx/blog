@@ -1,6 +1,12 @@
-
-Date: 2025-04-16
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 04"
+date: "2025-04-16"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 ### Activity Diagram
 ---
@@ -75,6 +81,3 @@ Tag: #2110426-selab
 	- student -> object ชื่อ student ไม่บอก type
 	- :Student -> object instantiate มาจาก Student แต่ไม่ได้บอกชื่อมันเอง
 	- s:Student -> object instantiate มาจาก Student และมันชื่อ 's'
-
-
-

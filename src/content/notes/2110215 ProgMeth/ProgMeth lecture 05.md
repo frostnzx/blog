@@ -1,6 +1,12 @@
-
-Date: 2025-02-05
-Tag: #2110215-progmeth 
+---
+title: "ProgMeth lecture 05"
+date: "2025-02-05"
+published: true
+kind: "note"
+course: "2110215 ProgMeth"
+tags:
+  - "2110215-progmeth"
+---
 
 #### JavaFX
 ---
@@ -147,4 +153,3 @@ btn.setOnAction(new EventHandler<ActionEvent>() {
 String image_path = ClassLoader.getSystemResource("images/homestay.jpg");
 ImageView imageView = new ImageView(new Image(image_path));
 ```
-

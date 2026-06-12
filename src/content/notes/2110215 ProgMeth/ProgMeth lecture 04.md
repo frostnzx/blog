@@ -1,6 +1,12 @@
-
-Date: 2025-01-31
-Tag: #2110215-progmeth 
+---
+title: "ProgMeth lecture 04"
+date: "2025-01-31"
+published: true
+kind: "note"
+course: "2110215 ProgMeth"
+tags:
+  - "2110215-progmeth"
+---
 
 ## Interface
 
@@ -263,6 +269,3 @@ public class TextEditor {
 	}
 }
 ```
-
-
-

@@ -1,6 +1,12 @@
-
-Date: 2025-04-24
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 12"
+date: "2025-04-24"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 #### Design for security
 ---
@@ -177,5 +183,3 @@ Can we trust connection -> ไม่
 - Use policy to authorize
 	- RBAC (role based access control) -> แต่ละ acc มี role อะไรบ้างและแต่ละ role ทำไรได้ เหมือน discord
 	- ABAC (attribute based access control) -> ไม่ได้แยกแค่ role แต่แยก role admin ทำได้ไม่เท่ากัน เป็นการระบุ attribute
-
-

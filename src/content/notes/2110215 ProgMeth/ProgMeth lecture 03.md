@@ -1,6 +1,12 @@
-
-Date: 2025-01-23
-Tag: #2110215-progmeth 
+---
+title: "ProgMeth lecture 03"
+date: "2025-01-23"
+published: true
+kind: "note"
+course: "2110215 ProgMeth"
+tags:
+  - "2110215-progmeth"
+---
 
 ## Abstract classes
 
@@ -98,7 +104,3 @@ protected void finalize() throws Throwable {
 	}
 }
 ```
-
-
-
-

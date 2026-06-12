@@ -1,6 +1,12 @@
-
-Date: 2025-02-03
-Tag: #2110322-database 
+---
+title: "Database lecture 06"
+date: "2025-02-03"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 #### INSERT
 ---
@@ -357,12 +363,3 @@ INSERT INTO boat VALUES(113,'BBB','Red');
 SELECT * FROM boat;
 COMMIT;
 ```
-
-
-
-
-
-
-
-
-

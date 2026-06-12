@@ -1,6 +1,12 @@
-
-Date: 2025-04-30
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 11"
+date: "2025-04-30"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 #### Software project management
 ---

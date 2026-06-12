@@ -1,11 +1,13 @@
-
-
-Class : [[2110222 : Intro to CEDT]]
-Subject/Topics : #AI
-Date : 2024-08-20
-Teacher : Google
-
-Notes : 
+---
+title: "AI Essential Module 1"
+date: "2024-08-20"
+published: true
+kind: "note"
+course: "2110222 : Intro to CEDT"
+teacher: "Google"
+tags:
+  - "AI"
+---
 
 ### Intro to Google Ai Essentials
 ---

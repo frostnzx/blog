@@ -1,6 +1,12 @@
-
-Date: 2025-04-20
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 09"
+date: "2025-04-20"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 #### System-Design based on NFRs requirements
 ---
@@ -134,6 +140,4 @@ Monolithic architecture -> เป็น style ที่ structure ของ app 
 
 - เมื่อ application โตขึ้นเรื่อยๆ agile development และ deployment จะ impossible เรียกสถานการณ์นี้ว่า monolithic hell
 
-Microservice -> Maintainability + Testability + Deployability + เปลี่ยน tech stack ได้ แบบไม่ต้องแคร์ชาวบ้านมากเพราะมันแยกกันอยู่แล้ว , ข้อเสียคือ การแตก service มันไม่ง่าย บางทีแตกไม่ถูกอาจจะแย่กว่าด้วยซ้ำ 
-
-
+Microservice -> Maintainability + Testability + Deployability + เปลี่ยน tech stack ได้ แบบไม่ต้องแคร์ชาวบ้านมากเพราะมันแยกกันอยู่แล้ว , ข้อเสียคือ การแตก service มันไม่ง่าย บางทีแตกไม่ถูกอาจจะแย่กว่าด้วยซ้ำ

@@ -1,6 +1,12 @@
-
-Date: 2025-01-15
-Tag: #2110215-progmeth 
+---
+title: "ProgMeth lecture 02"
+date: "2025-01-15"
+published: true
+kind: "note"
+course: "2110215 ProgMeth"
+tags:
+  - "2110215-progmeth"
+---
 
 ## Inheritance & Composition
 

@@ -1,7 +1,12 @@
-
-Date: 2025-01-08
-Tag: #2110215-progmeth
-
+---
+title: "ProgMeth lecture 00 Part2"
+date: "2025-01-08"
+published: true
+kind: "note"
+course: "2110215 ProgMeth"
+tags:
+  - "2110215-progmeth"
+---
 
 1. Kick start
 2. Data type
@@ -25,5 +30,3 @@ because you can use JRE to run file.class anywhere
 ---
 JDK can compile (javac & java)
 JRE can only run (java)
-
-

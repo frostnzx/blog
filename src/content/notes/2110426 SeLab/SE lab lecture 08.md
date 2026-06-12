@@ -1,6 +1,12 @@
-
-Date: 2025-04-20
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 08"
+date: "2025-04-20"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 ### User Interface Design
 
@@ -159,4 +165,4 @@ use case driven -> user ใช้งานอย่างไร
 - Operational requirement -> ui เราต้องไปติดตั้งใน hardware หรือ software platform ไหน
 - Performance requirement -> แล้วแต่ระบบต้องการให้เร็วแค่ไหนยังไง
 - Security requirement -> ui ต้องดูแล security มี login , logout 
-- Political & Cultural -> MM/DD/YY , DD/MM/YY , colors , currency , ... 
+- Political & Cultural -> MM/DD/YY , DD/MM/YY , colors , currency , ...

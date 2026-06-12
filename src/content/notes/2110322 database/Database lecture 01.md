@@ -1,5 +1,12 @@
-Date: 2025-01-07
-Tag: #2110322-database
+---
+title: "Database lecture 01"
+date: "2025-01-07"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 ### Database terminologies
 ---
@@ -74,18 +81,3 @@ NoSQL เป็น Non-relational database ที่เก่งในการ�
 ***เหมาะสำหรับ Big-data ที่ข้อมูลไม่ค่อยมีโครงสร้าง***
 
 NoSQL เช่น MongoDB , couchDB , Cassandra , ...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

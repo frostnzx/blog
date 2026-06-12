@@ -1,7 +1,12 @@
-
-Date: 2025-02-04
-Tag: #2110322-database 
-
+---
+title: "Database lecture 07"
+date: "2025-02-04"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 #### MongoDB
 ---
@@ -294,7 +299,7 @@ db.post.find({},{title:1,likes:1,_id:0}).sort({likes:-1})
 
 #### Indexing
 ---
-- db.COLLECTION_NAME.ensureIndex({KEY:1})
+- `db.COLLECTION_NAME.ensureIndex({KEY:1})`
 ```json
 db.post.ensureIndex({title:1})
 ```
@@ -329,18 +334,3 @@ db.post2.aggregate([
 	}
 ])
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,12 @@
-
-Date: 2025-04-22
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 10"
+date: "2025-04-22"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 #### Docker
 ---

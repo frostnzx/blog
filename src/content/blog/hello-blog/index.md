@@ -1,12 +1,13 @@
 ---
-title: Hello blog
-date: 2026-06-12
-description: A tiny sample article to prove the blog pipeline works.
-tags: sample writing
+title: "Hello blog"
+date: "2026-06-12"
+description: "A tiny sample article to prove the blog pipeline works."
 published: true
+kind: "blog"
+tags:
+  - "sample"
+  - "writing"
 ---
-
-# Hello blog
 
 This is a sample article. It lives in its own folder:
 

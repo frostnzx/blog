@@ -1,6 +1,12 @@
-
-Date: 2025-01-23
-Tag: #2110322-database 
+---
+title: "Database lecture 05.2"
+date: "2025-01-23"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 # SQL
 - ถูกกำหนดโดย ANSI
@@ -249,7 +255,3 @@ FROM account NATURAL JOIN branch ;
 --- และ join อื่นๆ
 
 ```
-
-
-
-

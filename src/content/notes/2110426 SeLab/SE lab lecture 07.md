@@ -1,6 +1,12 @@
-
-Date: 2025-04-09
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 07"
+date: "2025-04-09"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 ### Software Testing Techniques
 ---
@@ -164,5 +170,3 @@ Integration testing -> ทำได้ 2 แบบ
 ### Regression Test
 ---
 - ทำเมื่อมีอะไรเปลียนไป
-
-

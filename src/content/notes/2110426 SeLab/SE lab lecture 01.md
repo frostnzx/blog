@@ -1,6 +1,12 @@
-
-Date: 2025-03-31
-Tag: #2110426-selab
+---
+title: "SE lab lecture 01"
+date: "2025-03-31"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 #### The Product
 - Software คืออะไร

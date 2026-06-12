@@ -1,6 +1,12 @@
-
-Date: 2025-04-04
-Tag: #2110426-selab 
+---
+title: "SE lab lecture 05"
+date: "2025-04-04"
+published: true
+kind: "note"
+course: "2110426 SeLab"
+tags:
+  - "2110426-selab"
+---
 
 ### Software Design
 #### Intro

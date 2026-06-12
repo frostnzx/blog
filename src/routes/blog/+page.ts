@@ -1,21 +1,21 @@
-import { getBlogMetadata, getBlogSlug, type BlogMetadata } from '$lib/blog/metadata';
+import {
+	getContentSlug,
+	normalizeContentMetadata,
+	type MdsvexMetadata
+} from '$lib/content/metadata';
+
+const contentRoot = '/src/content/blog';
 
 export const load = async () => {
-	const rawModules = import.meta.glob<string>('/src/content/blog/**/*.md', {
+	const metadataModules = import.meta.glob<MdsvexMetadata>('/src/content/blog/**/*.md', {
 		eager: true,
-		query: '?raw',
-		import: 'default'
+		import: 'metadata'
 	});
 
-	const posts = Object.entries(rawModules)
-		.map(([path, raw]) => {
-			const slug = getBlogSlug(path);
-
-			return {
-				slug,
-				...getBlogMetadata(slug, {} satisfies BlogMetadata, raw)
-			};
-		})
+	const posts = Object.entries(metadataModules)
+		.map(([path, metadata]) =>
+			normalizeContentMetadata('blog', getContentSlug(path, contentRoot), metadata)
+		)
 		.filter((post) => post.published !== false)
 		.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 

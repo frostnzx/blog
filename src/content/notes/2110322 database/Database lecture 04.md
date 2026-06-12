@@ -1,6 +1,12 @@
-
-Date: 2025-01-23
-Tag: #2110322-database 
+---
+title: "Database lecture 04"
+date: "2025-01-23"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 ## Schema Refinement and Normal Forms
 
@@ -51,10 +57,10 @@ User Requirement --> ER diagram --> Relations (Table) --> Normal Forms
 	- Augmentation : X -> Y , then XZ -> YZ for any Z
 	- Transitivity : X -> Y and Y -> Z , then X -> Z
 - เช่นถ้าให้ f มา 2 ตัวคือ , f1 : ssn -> did และ f2 : did -> lot
-	- ดังนั้น F ที่เกิดขึ้นคือ {ssn->did} หรือ {did->lot} หรือ {ssn->did , did->lot}
-	- แต่เนื่องจากเราต้องการให้ F+ มี FD ครบๆ เราจึงควรใช้ F เป็น {ssn->did , did->lot}
+	- ดังนั้น F ที่เกิดขึ้นคือ `{ssn->did}` หรือ `{did->lot}` หรือ `{ssn->did , did->lot}`
+	- แต่เนื่องจากเราต้องการให้ F+ มี FD ครบๆ เราจึงควรใช้ F เป็น `{ssn->did , did->lot}`
 	- F+ จะสร้างต่อจาก F ที่มี FD ครบ และนำไป infer ตาม inference rules ต่างๆ
-	- ดังนั้นได้ F+ เป็น {ssn->did , did-> lot , ssn -> lot , ....}
+	- ดังนั้นได้ F+ เป็น `{ssn->did , did-> lot , ssn -> lot , ....}`
 - Additional rules
 	- Union : X -> Y and X -> Z , then X -> YZ
 	- Decomposition : X -> YZ , then X -> Y and X -> Z
@@ -67,23 +73,23 @@ User Requirement --> ER diagram --> Relations (Table) --> Normal Forms
 - ตามตัวอย่างถ้าเราอยากจะคำนวณหา F+ มันจะเยอะมาก 
 - ดังนั้นปกติเราจะแค่เช็คว่า FD X->Y ใดๆ อยู่ใน F+ รึป่าว
 	- มีวิธีคิดง่ายๆคือหา Attribute closure X+ (X closure) คือ set ของ attributes ซึ่ง X -> A อยู๋ใน F+
-	- เช่น ถามว่า F = {A->B,B->C,CD->E} imply A->E หรือไม่
+- เช่น ถามว่า F = `{A->B,B->C,CD->E}` imply A->E หรือไม่
 		- เช่น A -> E อยู่ใน F+ ไหม สามารถมองได้อีกแบบคือ E อยู่ใน A+ ไหม?
 		- ดังนั้นแค่หา closure ของ A (A+)
-		- A+ = {A,B,C} ดังนั้น A -> E ไม่ได้ ที่ไม่มี E ใน A เพราะเราไม่มี CD เพื่อนำไป implies E
+		- A+ = `{A,B,C}` ดังนั้น A -> E ไม่ได้ ที่ไม่มี E ใน A เพราะเราไม่มี CD เพื่อนำไป implies E
 
 #### How to use FDs to determine keys
 ---
 - attribute เป็น PRIME ถ้ามันเป็นส่วนนึงของ candidate key ใดๆ
 - attribute เป็น NON-PRIME ถ้ามันไม่เป็นส่วนนึงของ candidate key ไหนเลย
-- เช่น จาก R(a,b,c) มี F = {a->b,b->c}
+- เช่น จาก R(a,b,c) มี F = `{a->b,b->c}`
 	- สร้าง L , R , M 
 	- L : attribute ที่ปรากฎด้านซ้ายเท่านั้น
-		- L : {a}
+		- L : `{a}`
 	- R : attribute ที่ปรากฎด้านขวาเท่านั้น
-		- R : {c}
+		- R : `{c}`
 	- M : attribute ที่ปรากฎทั้งสองฝั่ง
-		- M : {b}
+		- M : `{b}`
 - ฝั่ง L must be part of the key
 - ฝั่ง R never be part of any key
 - ฝั่ง M may or may not be part of the key
@@ -139,5 +145,3 @@ User Requirement --> ER diagram --> Relations (Table) --> Normal Forms
 - สำหรับ FD X -> A
 	- ถ้าจะเป็น BCNF ต้อง
 	1. X เป็น superkey
-
-

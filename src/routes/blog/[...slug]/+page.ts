@@ -1,60 +1,28 @@
-import { getBlogMetadata, type BlogMetadata } from '$lib/blog/metadata';
-import { getNoteBody, renderMarkdown } from '$lib/notes/markdown';
+import {
+	getContentSlug,
+	getMatchingContentPath,
+	normalizeContentMetadata,
+	type MdsvexMetadata
+} from '$lib/content/metadata';
 import { error } from '@sveltejs/kit';
 
+const contentRoot = '/src/content/blog';
+
 export const load = async ({ params }) => {
-	const rawModules = import.meta.glob<string>('/src/content/blog/**/*.md', {
-		query: '?raw',
-		import: 'default'
+	const metadataModules = import.meta.glob<MdsvexMetadata>('/src/content/blog/**/*.md', {
+		eager: true,
+		import: 'metadata'
 	});
-	const assetModules = import.meta.glob<string>(
-		'/src/content/blog/**/*.{avif,gif,jpeg,jpg,png,svg,webp}',
-		{
-			eager: true,
-			query: '?url',
-			import: 'default'
-		}
-	);
+	const matchedPath = getMatchingContentPath(metadataModules, contentRoot, params.slug);
 
-	const slug = params.slug;
-	const matchPath = `/src/content/blog/${slug}.md`;
-	const indexMatchPath = `/src/content/blog/${slug}/index.md`;
-	const matchedPath = rawModules[matchPath] ? matchPath : indexMatchPath;
-	const match = rawModules[matchedPath];
-
-	if (!match) {
+	if (!matchedPath) {
 		error(404, 'Blog post not found');
 	}
 
-	const raw = await match();
-	const assets = getBlogAssets(matchedPath, assetModules);
+	const slug = getContentSlug(matchedPath, contentRoot);
 
 	return {
-		html: renderMarkdown(getNoteBody(raw), {
-			resolveAsset: (assetName) =>
-				assets.get(assetName) ?? assets.get(decodeURIComponent(assetName))
-		}),
-		metadata: getBlogMetadata(slug, {} satisfies BlogMetadata, raw)
+		contentPath: matchedPath,
+		metadata: normalizeContentMetadata('blog', slug, metadataModules[matchedPath])
 	};
-};
-
-const getBlogAssets = (matchedPath: string, assetModules: Record<string, string>) => {
-	const postDirectory = matchedPath.slice(0, matchedPath.lastIndexOf('/'));
-	const postRoot = postDirectory.endsWith('/assets')
-		? postDirectory.slice(0, -'/assets'.length)
-		: postDirectory;
-	const assets = new Map<string, string>();
-
-	for (const [path, url] of Object.entries(assetModules)) {
-		if (!path.startsWith(`${postRoot}/`)) continue;
-
-		const fileName = path.split('/').pop();
-		if (!fileName) continue;
-
-		const relativePath = path.slice(`${postRoot}/`.length);
-		assets.set(fileName, url);
-		assets.set(relativePath, url);
-	}
-
-	return assets;
 };

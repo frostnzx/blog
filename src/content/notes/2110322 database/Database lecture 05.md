@@ -1,7 +1,12 @@
-
-Date: 2025-01-23
-Tag: #2110322-database 
-
+---
+title: "Database lecture 05"
+date: "2025-01-23"
+published: true
+kind: "note"
+course: "2110322 database"
+tags:
+  - "2110322-database"
+---
 
 ## Relational Algebra 
 
@@ -64,7 +69,3 @@ R - S   -> operator on schemas
 	- Intersection ∩
 	- Division / 
 	- Renaming ρ
-
-
-
-
