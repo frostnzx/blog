@@ -12,7 +12,10 @@
 		Welcome to my personal site (^ム^). This is where I post interesting stuff or share my cool
 		projects.
 	</p>
-	<p>Computer Engineering <mark class="bg-pink-200">@Chula</mark>. Interests in web, systems, and infra.</p>
+	<p>
+		Computer Engineering <mark class="bg-pink-200">@Chula</mark>. Interests in web, systems, and
+		infra.
+	</p>
 	<p>Bangkok, Thailand.</p>
 </section>
 

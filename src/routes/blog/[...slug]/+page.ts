@@ -8,6 +8,8 @@ import { error } from '@sveltejs/kit';
 
 const contentRoot = '/src/content/blog';
 
+export const prerender = false;
+
 export const load = async ({ params }) => {
 	const metadataModules = import.meta.glob<MdsvexMetadata>('/src/content/blog/**/*.md', {
 		eager: true,

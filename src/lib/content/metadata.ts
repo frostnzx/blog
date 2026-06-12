@@ -58,8 +58,9 @@ export const getMatchingContentPath = <T>(
 	contentRoot: string,
 	slug: string
 ) => {
-	const matchPath = `${contentRoot}/${slug}.md`;
-	const indexMatchPath = `${contentRoot}/${slug}/index.md`;
+	const normalizedSlug = slug.replace(/\/$/, '');
+	const matchPath = `${contentRoot}/${normalizedSlug}.md`;
+	const indexMatchPath = `${contentRoot}/${normalizedSlug}/index.md`;
 
 	return modules[matchPath] ? matchPath : modules[indexMatchPath] ? indexMatchPath : undefined;
 };

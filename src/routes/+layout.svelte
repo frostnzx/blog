@@ -6,7 +6,8 @@
 
 	let { children } = $props();
 	let currentDateTime = $state('');
-	const isCurrent = (path: string) => page.url.pathname === path;
+	const normalizePath = (route: string) => (route === '/' ? route : route.replace(/\/$/, ''));
+	const isCurrent = (route: string) => normalizePath(page.url.pathname) === normalizePath(route);
 
 	onMount(() => {
 		const updateDateTime = () => {
