@@ -11,10 +11,10 @@
 		<h3>Stack</h3>
 		<p>
 			The app is built with <strong>SvelteKit</strong>. Most of the visual design is just regular
-			CSS in <code>src/routes/layout.css</code>.
+			CSS in <code>src/routes/layout.css</code>. I also setup <strong>Github Actions</strong> to auto
+			re-deployed on every new changes.
 		</p>
 	</article>
-
 	<article>
 		<h3>Content</h3>
 		<p>
