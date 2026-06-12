@@ -30,14 +30,14 @@ a family of OS's
 ---
 OS plug-in module for controlling a particular device
 
-![Pasted image 20240828003614](<./assets/Pasted image 20240828003614.png>)
+![Pasted image 20240828003614](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828003614.png>)
 
 
 ### Pre-emptive multitasking
 ---
 A primary purpose for modern OS is to allow for multiple processes to run at the same time , but the CPU core can only execute the code of one process at a time and the  "***os's own code can't run on a core at the same time as any process***"   ->  the solution is to have each CPU core alternate between running each open process and Alternate running processes with running OS code
 
-![Pasted image 20240828004056](<./assets/Pasted image 20240828004056.png>)
+![Pasted image 20240828004056](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828004056.png>)
 
 <p style="color:green;">Process -> Green </p>
 <p style="color:blue;">OS -> Green </p>
@@ -74,11 +74,11 @@ but processes must be able to invoke certain routines at fixed addresses in the 
 
 To invoke the system call a process must use a specific CPU instruction called CIS call in which the process specifies a system call number
 
-![Pasted image 20240828014126](<./assets/Pasted image 20240828014126.png>)
+![Pasted image 20240828014126](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828014126.png>)
 
 When the CIS call is invoke the processor looks in the system call table for the address in the routine corresponding to the number and jump execution to that address
 
-![Pasted image 20240828014359](<./assets/Pasted image 20240828014359.png>)
+![Pasted image 20240828014359](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828014359.png>)
 
 The CPU run on 2 priviledge levels.
 
@@ -86,12 +86,12 @@ When OS code runs the CPU runs on the priviledge level that allows access of the
 
 When the process run CPU is put into priviledge level that triggers a hardware exception , when the code attempts to access the IO devices or addresses that is not allowed for that process, proccesses supposed to directly touch only their own memory not anything else in the system
 
-![Pasted image 20240828014612](<./assets/Pasted image 20240828014612.png>)
+![Pasted image 20240828014612](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828014612.png>)
 
 
 ### How process uses memory
 ---
-![Pasted image 20240828015019](<./assets/Pasted image 20240828015019.png>)
+![Pasted image 20240828015019](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828015019.png>)
 
 each process use its portion of the memory for stack , heap and text (storing processes code in binary form but for some reason they call it text wtf).
 
@@ -101,9 +101,9 @@ each process use its portion of the memory for stack , heap and text (storing pr
 
 #### Stack
 ---
-![Pasted image 20240828015622](<./assets/Pasted image 20240828015622.png>)
+![Pasted image 20240828015622](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828015622.png>)
 
-![Pasted image 20240828015812](<./assets/Pasted image 20240828015812.png>)
+![Pasted image 20240828015812](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828015812.png>)
 
 Stack size usually keep tracks with the     ***Stack boundary***    and when the stack pointer run past the stack boundary , it triggers a hardware exception and the exception handler may increase the stack space by moving the stack boundary. but at some point the exception handler may think that the stack is grown too large and may simply terminate the process.
 Generally a processes stack should only get so big a megabyte or two at the high end , the common cause of an overly large stack is an overly long chain of recursive function calls.
@@ -112,18 +112,18 @@ In embedded system , the stack doesn't have stack boundary, so the stack might o
 
 #### How memory portion arranges
 ---
-![Pasted image 20240828020428](<./assets/Pasted image 20240828020428.png>)
+![Pasted image 20240828020428](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828020428.png>)
 
 The process must request chunks of Heap storage from the OS with a system call.
 The system call tell OS how much space it want , the OS decide where to stores it.
 
-![Pasted image 20240828020727](<./assets/Pasted image 20240828020727.png>)
+![Pasted image 20240828020727](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828020727.png>)
 
 As the process allocates and deallocates chunks memory the memory space can become more and more fragmented. shrinking the size of heap chunks, good allocation algorithm can minimize the fragmentation, but the problem can't be avoided entirely.
 
 Failing to deallocate unneeded memory is a bug called     ***Memory Leak***
 
-![Pasted image 20240828021141](<./assets/Pasted image 20240828021141.png>)
+![Pasted image 20240828021141](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828021141.png>)
 
 The memory addresses of the process do not actually refers directly to actual bytes of system memory, instead chunks of the process address space are mapped by the OS to chunks of system memory, but not neccessarily continuously or in the same order.
 
@@ -134,7 +134,7 @@ Each page is usually a set size which depends upon the CPU 32-bit x86 usually us
 To free up ram usually OS may decide to swap out pages of a process to storage usually a 
 Hard Drive.
 
-![Pasted image 20240828022344](<./assets/Pasted image 20240828022344.png>)
+![Pasted image 20240828022344](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828022344.png>)
 
 These heap pages have been marked swapped.
 An attempt by the process to access an address in a swapped page will trigger an exception, and the OS will copy the swapped page back to RAM and adjust the memory table before allowing the process to proceed.
@@ -142,7 +142,7 @@ An attempt by the process to access an address in a swapped page will trigger an
 
 ### Process states
 ---
-![Pasted image 20240828023540](<./assets/Pasted image 20240828023540.png>)
+![Pasted image 20240828023540](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828023540.png>)
 
 ***create*** -> OS does all the process it needs at time of creation
 ***waiting*** -> Waiting to be selected by the scheduler
@@ -153,7 +153,7 @@ An attempt by the process to access an address in a swapped page will trigger an
 
 ### Partition
 ---
-![Pasted image 20240828023934](<./assets/Pasted image 20240828023934.png>)
+![Pasted image 20240828023934](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240828023934.png>)
 
 Most commonly a drive is formatted to have just one partition occupying its entire storage area,
 still creating multiple partitions serves some niche use cases such as installing multiple OS on a single drive.

@@ -26,7 +26,7 @@ is AI-powered software that can automate or assist users with a variety of tasks
 ***AI models***
 is a computer program trained on sets of data to recognize patterns and perform specific tasks.
 
-![Pasted image 20240821143608](<./assets/Pasted image 20240821143608.png>)
+![Pasted image 20240821143608](</content/notes/2110222 Intro to CEDT/assets/Pasted image 20240821143608.png>)
 **Note:** Some AI tools leverage multiple AI models, working together as a "family," to achieve more flexibility and perform a wider range of tasks. Each model within the family might be specialized for a specific subtask, ultimately contributing to the overall functionality of the AI tool. You'll explore these types of multimodal tools later in this course.
 
 #### **The process of training AI models**
