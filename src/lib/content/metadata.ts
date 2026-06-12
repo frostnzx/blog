@@ -1,3 +1,4 @@
+import { resolve } from '$app/paths';
 import { formatNoteDate } from '$lib/notes/date';
 
 export type ContentKind = 'blog' | 'note';
@@ -35,7 +36,7 @@ export const getContentSlug = (path: string, contentRoot: string) => {
 };
 
 export const getContentUrl = (kind: ContentKind, slug: string) =>
-	`/${kind === 'note' ? 'notes' : 'blog'}/${slug.split('/').map(encodeURIComponent).join('/')}`;
+	kind === 'note' ? resolve('/notes/[...slug]', { slug }) : resolve('/blog/[...slug]', { slug });
 
 export const getContentTitleFromSlug = (slug: string) => {
 	const filename = slug.split('/').pop() ?? slug;

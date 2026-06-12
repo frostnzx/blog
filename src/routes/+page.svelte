@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { asset, base } from '$app/paths';
+</script>
+
 <svelte:head>
 	<script
 		type="module"
@@ -23,7 +27,8 @@
 	<h1 id="links-heading">things</h1>
 
 	<p>
-		<a href="/resume">my resume</a>, currently open to part-time / freelance opportunities<br />
+		<a href={`${base}/resume`}>my resume</a>, currently open to part-time / freelance opportunities<br
+		/>
 		<a href="https://github.com/frostnzx">my github</a>, planning to contribute to more open-source
 		projects<br />
 		<a href="https://www.linkedin.com/in/siwakornsri/">linkedin</a>, you can also contact me here
@@ -40,24 +45,24 @@
 		<h2>features</h2>
 		<article>
 			<time datetime="2026-06-12">Jun 12, 2026</time>
-			<a href="/notes">notes</a>
+			<a href={`${base}/notes`}>notes</a>
 			<p>Mostly academic notes for my peers, written in Markdown.</p>
 		</article>
 		<article>
 			<time datetime="2026-06-12">Jun 12, 2026</time>
-			<a href="/projects">projects</a>
+			<a href={`${base}/projects`}>projects</a>
 			<p>Stuff I built in my free time, plus projects I worked on for my university or faculty.</p>
 		</article>
 		<article>
 			<time datetime="2026-06-12">Jun 12, 2026</time>
-			<a href="/blog">blog</a>
+			<a href={`${base}/blog`}>blog</a>
 			<p>Writing on web, systems, infra, and things I’m figuring out.</p>
 		</article>
 	</div>
 
 	<div>
 		<h2>earth</h2>
-		<model-viewer src="/models/earth.glb" alt="Earth" camera-controls></model-viewer>
+		<model-viewer src={asset('/models/earth.glb')} alt="Earth" camera-controls></model-viewer>
 		<p>pretty cool blue earth visual by ye (fka kanye west)</p>
 	</div>
 </section>

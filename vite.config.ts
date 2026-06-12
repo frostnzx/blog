@@ -4,6 +4,8 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { mdsvex } from 'mdsvex';
 
+const base = (process.env.BASE_PATH ?? '') as '' | `/${string}`;
+
 export default defineConfig({
 	plugins: [
 		tailwindcss(),
@@ -20,6 +22,9 @@ export default defineConfig({
 				fallback: '404.html',
 				strict: false
 			}),
+			paths: {
+				base
+			},
 			prerender: {
 				crawl: false
 			}
