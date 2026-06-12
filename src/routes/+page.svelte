@@ -6,13 +6,14 @@
 </svelte:head>
 
 <section class="intro">
-	<p>Hi I'm Siwakorn Sriveerakul (gene).</p>
+	<p>Hi I'm Siwakorn Sriveerakul (Gene).</p>
 	<p><strong>Fullstack Engineer focused on backend.</strong></p>
 	<p>
 		Welcome to my personal site (^ム^). This is where I post interesting stuff or share my cool
 		projects.
 	</p>
 	<p>Computer Engineering @Chula. Interests in web, systems, and infra.</p>
+	<p>Bangkok, Thailand.</p>
 </section>
 
 <section class="link-list" aria-labelledby="links-heading">
@@ -42,12 +43,12 @@
 		<article>
 			<time datetime="2026-06-12">Jun 12, 2026</time>
 			<a href="/projects">projects</a>
-			<p>Things I built, broke, fixed, and kept around.</p>
+			<p>Stuff I built in my free time, plus projects I worked on for my university or faculty.</p>
 		</article>
 		<article>
 			<time datetime="2026-06-12">Jun 12, 2026</time>
 			<a href="/blog">blog</a>
-			<p>Small notes on web, systems, infra, and things I’m figuring out.</p>
+			<p>Writing on web, systems, infra, and things I’m figuring out.</p>
 		</article>
 	</div>
 

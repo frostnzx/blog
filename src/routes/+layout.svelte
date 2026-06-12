@@ -27,7 +27,7 @@
 
 <div class="site-frame">
 	<aside class="sidebar">
-		<a href="/" class="site-title">siwakorn.dev</a>
+		<a href="/" class="site-title">frostnzx.github.io</a>
 
 		<nav class="site-nav" aria-label="Main navigation">
 			<a href="/" aria-current={isCurrent('/') ? 'page' : undefined}>home</a>
@@ -36,7 +36,7 @@
 			<a href="/resume" aria-current={isCurrent('/resume') ? 'page' : undefined}>resume</a>
 			<a href="/notes" aria-current={isCurrent('/notes') ? 'page' : undefined}>notes</a>
 			<a href="/blog" aria-current={isCurrent('/blog') ? 'page' : undefined}>blog</a>
-			<a href="/Contact" aria-current={isCurrent('/Contact') ? 'page' : undefined}>contact</a>
+			<a href="/contact" aria-current={isCurrent('/contact') ? 'page' : undefined}>contact</a>
 		</nav>
 
 		{#if currentDateTime}
