@@ -8,6 +8,17 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	namespace svelteHTML {
+		interface IntrinsicElements {
+			'model-viewer': {
+				src?: string;
+				alt?: string;
+				style?: string;
+				'camera-controls'?: boolean;
+			};
+		}
+	}
 }
 
 export {};
