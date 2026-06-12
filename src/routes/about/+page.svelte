@@ -18,17 +18,9 @@
 	<article>
 		<h3>Content</h3>
 		<p>
-			Each page is written as Markdown and loaded with Vite's
-			<code>import.meta.glob</code>, so adding a file is enough to make it appear on the site.
-		</p>
-	</article>
-
-	<article>
-		<h3>Markdown</h3>
-		<p>
-			The notes are rendered as raw Markdown text instead of being compiled as Svelte components.
-			That keeps old class notes, Obsidian-style image embeds, Thai text, code snippets, and odd
-			symbols from breaking the site.
+			Notes and blog posts are Markdown files with YAML frontmatter. I use
+			<a href="https://github.com/pngwn/mdsvex">mdsvex</a> to render Markdown files as Svelte components,
+			making it easy to maintain and add content to this site.
 		</p>
 		<p>
 			⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⣀⣁⣀⣀⣀⣀⡀⠀⠤⠄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

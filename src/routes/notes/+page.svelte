@@ -8,8 +8,8 @@
 	<h2 class="font-extrabold">Notes</h2>
 	<p>
 		Academic notes I share with peers and anyone interested.<br />
-		Some may be wrong, so feel free to correct me. <br />
-		Some parts of these notes are written in 🇹🇭.
+		Some part may technically incorrect, so feel free to correct me. <br />
+		Note that some parts of these notes are written in Thai.
 	</p>
 </section>
 
