@@ -1,5 +1,5 @@
 <script lang="ts">
-	const fileId = '1W0AL43_DmFl1Hn2NGWR3bcUJ0lhhaZua';
+	const fileId = '1rtfBp2CBE619K1C_Ef8VM-nFme6jOVYX';
 
 	const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
 	const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
